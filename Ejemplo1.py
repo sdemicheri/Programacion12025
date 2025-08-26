@@ -8,6 +8,7 @@ try:
     print("La unidad es: ",u)
     print("La decena es: ",d)
     print("La centena es: ",c)
+    print("Gracias por utilizar el sistema")
 except ValueError:
     print("Error en el ingreso de los datos")
     
