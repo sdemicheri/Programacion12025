@@ -1,3 +1,4 @@
+print("Bienvenidos")
 try:
     num=int(input("Ingrese un numero: "))
     c=num//100
