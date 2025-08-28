@@ -25,3 +25,21 @@
 #1 billetes de $ 10
 #1 billetes de $ 5
 #2 billetes de $ 1
+precio_peluche = int(input())
+billetes_100 = precio_peluche // 100
+monto_restante = precio_peluche % 100
+billetes_50 = monto_restante // 50
+monto_restante = monto_restante % 50
+billetes_20 = monto_restante // 20
+monto_restante = monto_restante % 20
+billetes_10 = monto_restante // 10
+monto_restante = monto_restante % 10
+billetes_5 = monto_restante // 5
+monto_restante = monto_restante % 5
+billetes_1 = monto_restante // 1
+print(billetes_100, "billetes de $100")
+print(billetes_50, "billetes de $50")
+print(billetes_20, "billetes de $20")
+print(billetes_10, "billetes de $10")
+print(billetes_5, "billetes de $5")
+print(billetes_1, "billetes de $1")
