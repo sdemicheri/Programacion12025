@@ -8,7 +8,21 @@ Precio del peluche
 Tipos de billetes disponibles
 
 PROCESO:
-
+pedir precio de billete
+billete100= precio//100
+precio= precio%100
+billete100= precio//50
+precio= precio%50   
+billete100= precio//20
+precio= precio%20
+billete100= precio//10
+precio= precio%10
+billete100= precio//5
+precio= precio%5
+billete100= precio//2
+precio= precio%2
+billete100= precio//1
+mostrar una lista con los tipos de billete y la cantidad necesaria para comprar el peluche
 
 SALIDA:
 cantidad de billetes de cada demnominacion para comprar el peluche 
