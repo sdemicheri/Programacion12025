@@ -18,3 +18,10 @@
 # Billetes de $1
 #2÷1=2 
 #mostrar cuantos billetes de 100, 50, 20,10,5, 1 se ultizaron
+#salida
+#2 billetes de $100
+#0 billetes de $ 50
+#1 billetes de $ 20
+#1 billetes de $ 10
+#1 billetes de $ 5
+#2 billetes de $ 1
