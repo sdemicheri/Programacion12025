@@ -13,7 +13,6 @@ Escribir cuantos billetes de cada denominación se necesita con el mensaje: "{} 
 
 SALIDA:
 Cantidad de billetes de cada denominación que necesita
-
 """
 precio_peluche=int(input("Hola Lu, ingresa el precio del peluche: $"))
 
