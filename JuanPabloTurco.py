@@ -1,17 +1,21 @@
 precio=int(input())
 billete100= precio//100
 precio= precio%100
-billete100= precio//50
+billete50= precio//50
 precio= precio%50   
-billete100= precio//20
+billete20= precio//20
 precio= precio%20
-billete100= precio//10
+billete10= precio//10
 precio= precio%10
-billete100= precio//5
+billete5= precio//5
 precio= precio%5
-billete100= precio//2
-precio= precio%2
-billete100= precio//1
+billete1= precio
+print ("billete de: ", billete100)
+print ("billete de: ", billete50)
+print ("billete de: ", billete20)
+print ("billete de: ", billete10)
+print ("billete de: ", billete5)
+print ("billete de: ", billete1)
 
 #ANALISIS
 #Lucía, una niña de 8 años quiere comprarse un peluche que cuesta un determinado monto. Sin embargo, Lucía no sabe cuántos billetes necesita llevar a la tienda para pagar su peluche. Tiene billetes de $100, $50, $20, $10, $5 y $1.
