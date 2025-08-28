@@ -10,12 +10,12 @@ precio= precio%10
 billete5= precio//5
 precio= precio%5
 billete1= precio
-print ("billete de: ", billete100)
-print ("billete de: ", billete50)
-print ("billete de: ", billete20)
-print ("billete de: ", billete10)
-print ("billete de: ", billete5)
-print ("billete de: ", billete1)
+print (billete100, "billetes de $100")
+print (billete50, "billetes de $50")
+print (billete20, "billetes de $20")
+print (billete10, "billetes de $10")
+print (billete5, "billetes de $5")
+print (billete1, "billetes de $1")
 
 #ANALISIS
 #Lucía, una niña de 8 años quiere comprarse un peluche que cuesta un determinado monto. Sin embargo, Lucía no sabe cuántos billetes necesita llevar a la tienda para pagar su peluche. Tiene billetes de $100, $50, $20, $10, $5 y $1.
