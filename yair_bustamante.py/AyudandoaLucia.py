@@ -1,5 +1,27 @@
 #Analisis
-#Entrada= Precio del peluche
-#Proceso = Calcular los billetes de 100,50,20,10,5,1
-#          Sumar la cantidad de billetes hasta llegar al precio
-#          
+#Entrada = Precio del peluche
+precio=int(input("Hola Lucía, ingresa el precio del peluche"))
+#Proceso = Calcular la cantidad de billetes que se necesitan para llegar al precio del peluche
+billete100 = precio // 100
+resto = precio % 100
+
+billete50 = resto // 50
+resto = resto % 50
+
+billete20 = resto // 20
+resto = resto % 20
+
+billete10 = resto // 10
+resto = resto % 10
+
+billete5 = resto // 5
+resto = resto % 5
+
+billete1 = resto
+#Salida = Cantidad de billetes que se necesitan para pagar el precio del peluche
+print(billete100, "billetes de $100")
+print(billete50, "billetes de $ 50")
+print(billete20, "billetes de $ 20")
+print(billete10, "billetes de $ 10")
+print(billete5, "billetes de $ 5")
+print(billete1, "billetes de $ 1")
