@@ -1,10 +1,6 @@
 #ANALISIS
-# entrada:preciopeluche
-#proceso: pedir preciopeluche 
-#billetes100=preciopeluche/100
-#restode100=preciopeluche%100
-#billetes50=restode100/10
-#restode50=
+ENTRADA:preciopeluche
+PROCESO:
 preciopeluche=int(input())
 billetes100=preciopeluche/100
 restode100=preciopeluche%100
@@ -23,3 +19,5 @@ print(int(billetesde20))
 print(int(billetes10))
 print(int(billetes5))
 print(int(billetes1))
+SALIDA: 
+CANTIDAD DE BILLETES
