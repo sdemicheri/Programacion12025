@@ -7,5 +7,5 @@ chocolates = 4
 precio = 50
 impuesto = 0.10
 
-total = chocolates * precio + chocolates * precio * impuesto
+total = (chocolates * precio) + impuesto
 print("Total a pagar:", total)
