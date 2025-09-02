@@ -1,5 +1,6 @@
 """
 ENTRADA:
+
 TOTAL $ COMIDA
 TOTAL $ BEBIDA SIN ALCOHOL
 TOTAL $ BEBIDA CON ALCOHOL
@@ -16,28 +17,34 @@ PEDIR CANTIDAD DE INVITADOS QUE BEBEN ALCOHOL
 DIVIDIR TOTAL DE LA COMIDA POR CANTIDAD DE INVITADOS Y SUMARLE A ESO LA DIVISION TOTAL 
 DE LA BEBIDA SIN ALCOHOL POR CANTIDAD DE INVITADOS
 
-
-
 SALIDA:
+
 MOSTRAR IMPORTE QUE DEBE ABONAR CADA INVITADO
 MOSTRAR IMPORTE EXTRA POR EL CONSUMO DE ALCOHOL
 
 """
+try:
+   comida = int(input("Ingrese el total de la comida: "))
+   bebida_sin_alcohol = int(input("Ingrese el total de la bebida sin alcohol: "))
+   bebida_con_alcohol = int(input("Ingrese el total de la bebida con alcohol: "))
+   invitados = int(input("Ingrese el total de invitados: "))
+   invitados_beben_alcohol = int(input("Ingrese el total de invitados que beben alcohol: "))
+   
+   importe = comida/invitados + bebida_sin_alcohol/invitados
 
-comida = int(input("Ingrese el total de la comida: "))
-bebida_sin_alcohol = int(input("Ingrese el total de la bebida sin alcohol: "))
-bebida_con_alcohol = int(input("Ingrese el total de la bebida con alcohol: "))
-invitados = int(input("Ingrese el total de invitados: "))
-invitados_beben_alcohol = int(input("Ingrese el total de invitados que beben alcohol: "))
+   if(comida <= 0 or bebida_sin_alcohol <= 0 or bebida_con_alcohol <= 0 or 
+invitados <= 0 or invitados_beben_alcohol <= 0 or invitados_beben_alcohol > invitados):
+    raise Exception ("los datos ingresados son incorrectos, por favor verifique")
+   
+   if(invitados_beben_alcohol> 0): 
+    extra = bebida_con_alcohol/invitados_beben_alcohol
+    print("El importe extra por el consumo de alcohol: ", extra)
+   else:
+    print("No hay invitados que consuman alcohol")
+    
+   print("El importe que debe abonar cada invitado es de : ", importe)
+except ValueError:
+   print("los datos ingresados son incorrectos, por favor verifique")
 
-importe = comida/invitados + bebida_sin_alcohol/invitados
-try :
-   extra = bebida_con_alcohol/invitados_beben_alcohol
-except ZeroDivisionError:
-   extra = 0
-   print("No hay invitados que beban alcohol, por lo tanto no hay importe extra.")
-else:
- print("El importe extra por el consumo de alcohol: ", extra)
- 
-print("El importe que debe abonar cada invitado es de : ", importe)
-
+except Exception as error:
+  print(error.__str__())
