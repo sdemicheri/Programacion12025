@@ -9,7 +9,7 @@ try:
     centena = num // 100
     resto = num % 100
     decena = resto // 10
-    unidad = num % 10
+    unidad = resto % 10
 
     print (centena)
     print (decena)

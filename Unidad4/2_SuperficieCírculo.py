@@ -1,10 +1,10 @@
 PI = 3.1415
 try:
-   radio = int(input("Ingrese el radio: "))
+   radio = float(input("Ingrese el radio: "))
 except ValueError:
    print("Error en el ingreso de números")
 else:
-    area = PI(radio*radio)
-    print("la superficie del circulo es: ", round, 2)
+    area = PI* (radio)**2
+    print(f"la superficie del circulo es: {area:.2f}")
 finally:
     print("Gracias por usar el programa")
