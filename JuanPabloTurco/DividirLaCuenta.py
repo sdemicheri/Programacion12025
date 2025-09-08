@@ -1,4 +1,4 @@
-InvitadosAlcohol=True
+invitadosAlcohol=True
 alcohol=True
 try:
     comida=int(input("ingrese el total de la comida"))
@@ -8,7 +8,7 @@ try:
     invitadosCA=int(input("ingrese el total de invitados que tomen alcohol"))
     importe= comida/invitados+bebidaSA/invitados
     if invitadosCA==0:
-        InvitadosAlcohol=False
+        invitadosAlcohol=False
     else:    
         extraCA= bebidaCA/invitadosCA
     if bebidaCA==0:
@@ -19,9 +19,9 @@ except ZeroDivisionError:
     print("Si no hay invitados: Nadie tiene que pagar!")
 else:
     print ("El total a pagar de cada uno es de: $", importe)
-    if InvitadosAlcohol==True and alcohol==False:
+    if invitadosAlcohol==True and alcohol==False:
         print("No hay alcohol para los que consumen, o no les cuesta nada")
-    elif InvitadosAlcohol==False and alcohol==True:
+    elif invitadosAlcohol==False and alcohol==True:
         print ("No hay nadie que consuma y pague el alcohol")
     else:
         print ("Los que tomaran alcohol pagaran aparte: $", extraCA, "o en total: $", extraCA+importe)
