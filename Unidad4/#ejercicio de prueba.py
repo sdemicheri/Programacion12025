@@ -5,7 +5,7 @@ bebida_sa = int(input("ingrese el total de la bebida sin alcohol: "))
 invitados = int(input("ingrese la cantidad de envitados: "))
 invitados_ca = int(input("ingrese la cantidad de invitados: "))
 importe = comida/invitados+bebida_sa/invitados
-try: 
+if ( invitados > 0)
  extra =bebida_ca/invitados_ca
 except ZeroDivisionError:
  print("No hay personas que consuman alcohol")
