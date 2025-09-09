@@ -10,7 +10,7 @@ anio_actual = int(input("Ingrese el año actual: "))
 if anio_nacimiento < anio_actual:
     edad = anio_actual - anio_nacimiento
 else:
-    print("El año de nacimiento no puede ser mayor que el año actual")
+    print("ERROR.El año de nacimiento no puede ser mayor que el año actual")
 
 
 #Calcular la edad
