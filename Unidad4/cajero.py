@@ -1,5 +1,16 @@
 try:
-    clave = int(input("Ingrese la clave: "))
+    try:
+        clave = int(input("Ingrese la clave de cuatro dígitos: "))
+        if clave < 0:
+         print("La clave no puede ser negativa")
+        elif clave <= 100 <= 999:
+          print("La clave no tiene la cantidad de dígitos")
+        elif clave > 9999:
+            print("Error, la clave no puede tener más de cuatro dígitos")
+        else:
+            print("Clave aceptada")
+    except ValueError:
+       print("Ingresó un dato no válido")
     saldo = float(input("Ingrese el saldo de su cuenta "))
     print("Seleccione 1 para retirar dinero")
     print("Seleccione 2 para ver el saldo actual de la cuenta")
