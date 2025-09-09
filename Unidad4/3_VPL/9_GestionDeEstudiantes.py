@@ -7,12 +7,12 @@ try:
     promedio = (nota1 + nota2 + nota3)/3
 
     print (f"Promedio: {promedio:.2f}")
-
+    
     if edad >= 18:
         print ("Es mayor de edad")
+    
     else:
         print ("Es menor de edad")
-
     if promedio >= 9:
         rendimiento = "Excelente"
         print("Rendimiento:",rendimiento)
@@ -28,13 +28,11 @@ try:
     elif promedio <6:
         rendimiento = "Insuficiente"
         print("Rendimiento:",rendimiento)
-
+    
     if edad < 18 and promedio >= 8:
         print("Beca de excelencia juvenil")
-
     if edad >= 18 and promedio >= 9:
         print("Reconocimiento al mérito")
-
     if promedio <6:
         print("Requiere apoyo académico")
 
