@@ -16,7 +16,7 @@ try:
             opcion = int(input("Seleccione un número: "))
             if opcion == 1:
                 dinero = float(input("Ingrese la cantidad de dinero a retirar: "))
-                if dinero > saldo:
+                if dinero > saldo or dinero <= 0:
                     print("No tiene la cantidad suficiente para retirar ese monto")
                 else:
                     saldo_final = saldo - dinero
