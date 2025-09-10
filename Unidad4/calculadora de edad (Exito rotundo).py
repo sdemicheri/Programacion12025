@@ -6,7 +6,7 @@ try:
    mes2 = int(input("Ponga el numero de el mes de este año:"))
    dia2 = int(input("Ponga el numero del dia de hoy:"))
     
-   if( año < 0 or dia < 0 or mes < 0):
+   if( año < 0 or dia <= 0 or mes < 0):
        print("Usted no ha nacido porfavor pasele el condigo a alguien que si nacio")
    elif( año2 <= 0 or mes2 <= 0 or dia <= 0):
        print("No puede haber un dia mes año con ese numero, porfavor vuelva a poner los datos")
