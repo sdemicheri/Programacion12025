@@ -10,7 +10,7 @@ try:
        print("Usted no ha nacido porfavor pasele el condigo a alguien que si nacio")
    elif( año2 <= 0 or mes2 <= 0 or dia <= 0):
        print("No puede haber un dia mes año con ese numero, porfavor vuelva a poner los datos")
-   elif( mes > 12 or mes > 12):
+   elif( mes > 12 or mes2 > 12):
        print("No hay mes 13 o derivados porfavor vuelva a poner los datos")
    elif( dia > 31 or dia2 > 31):
        print("Los dias del mes no puede tener mas de 31 dias, porfavor vuelva a poner los datos")
