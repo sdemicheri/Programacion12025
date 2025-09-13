@@ -1,0 +1,8 @@
+N = int(input("ingrese un numero:"))
+acu = 1
+for i in range (N):
+    acu += 1
+    if ( N % acu == 0):
+        print("su numero no es primo")
+    elif( acu == N):
+        print("su numero es primo")

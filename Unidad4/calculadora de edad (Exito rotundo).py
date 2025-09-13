@@ -19,7 +19,7 @@ try:
        print(f"Su bebe tiene {dia3} dias")
    elif( año == 0):
        mes3 = mes2 - mes
-       print(f"Su bebe tiene {mes3} mese")
+       print(f"Su bebe tiene {mes3} mes")
    elif(año2 < año):
         print("No me esperaba conocer un viajero del tiempo, vuelva a poner su fecha de nacimiento")
    elif( mes > mes2):
