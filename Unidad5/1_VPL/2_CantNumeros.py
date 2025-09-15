@@ -6,8 +6,12 @@ Mostrar la cantidad de números ingresados al terminar
 """
 contador = 0
 numero = 0
+
 while numero >= 0:
-    numero = int(input("Ingrese un número: "))
-    if numero >= 0:
-        contador += 1
+    try:
+        numero = int(input("Ingrese un número: "))
+        if numero >= 0:
+            contador += 1
+    except ValueError:
+        print("Error en el ingreso de los datos, por favor ingrese un numero entero positivo")
 print(f"Cantidad de números ingresados: {contador}")
