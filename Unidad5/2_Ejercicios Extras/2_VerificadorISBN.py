@@ -17,11 +17,11 @@ numero = int(input("Ingrese el número de 10 dígitos : ")) #9684443242
 suma = 0
 contador = 9
 
-for i in range(1,11,1):
+for i in range(0,10,1):
     digitos = numero % 10
     numero = numero // 10
 
-    if i >= 2:
+    if i >= 1:
         multiplicacion = (digitos * contador)
         suma += multiplicacion # SUMA FINAL = 178
     
