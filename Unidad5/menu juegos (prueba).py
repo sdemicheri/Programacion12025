@@ -1,0 +1,5 @@
+print("**********BIENVENIDO AL MENU**********")
+print(":")
+print(":")
+print(":")
+print("1. piedra papel o tijeras")
