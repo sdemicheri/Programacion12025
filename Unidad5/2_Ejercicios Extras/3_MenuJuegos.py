@@ -13,25 +13,28 @@ if opcion_elegida == "1":
     print("-"*46)
     print("Iniciando: 'Trivia - Argentina' ¡Buena suerte!")
     print("-"*46)
+    print("")
 elif opcion_elegida == "2":
     print("-"*45)
     print("Iniciando: 'Adivina el número' ¡Buena suerte!")
     print("-"*45)
+    print("")
 elif opcion_elegida == "3":
     print("-"*49)
     print("Iniciando: 'Piedra Papel o Tijera' ¡Buena suerte!")
     print("-"*49)
+    print("")
 elif opcion_elegida == "0":
     print(f"FINALIZANDO EL PROGRAMA...")
 else:
     print(f"Opcion no valida, por favor revise la entrada")
 if opcion_elegida == "3":
-    USUARIO = int(input("Eliga una jugada (ingrese el número) 1. Piedra 2. Papel 3. Tijera : "))
-    if USUARIO == 1:
+    usuario = int(input("Eliga una jugada (ingrese el número) 1. Piedra 2. Papel 3. Tijera : "))
+    if usuario == 1:
         jugada1 = "piedra"
-    elif USUARIO == 2:
+    elif usuario == 2:
         jugada1 = "papel"
-    elif USUARIO == 3:
+    elif usuario == 3:
         jugada1 = "tijera"
     computadora = random.randint(1,3)
     if computadora == 1:
@@ -40,8 +43,7 @@ if opcion_elegida == "3":
         jugada2 = "papel"
     elif computadora == 3:
         jugada2 = "tijera"
-    if (jugada1 == "piedra" or jugada1 == "papel" or jugada1 == "tijera") \
-        and (jugada2 == "piedra" or jugada2 == "papel" or jugada2 == "tijera"):
+    if (usuario == 1 or usuario == 2 or usuario == 3):
         if jugada1 == jugada2:
             print(f"EMPATE, ambos eligieron {jugada1}")
         elif (jugada1 == "piedra" and jugada2 == "tijera") or \
@@ -49,25 +51,89 @@ if opcion_elegida == "3":
             (jugada1 == "tijera" and jugada2 == "papel"):
             print(f"GANA {"USUARIO"} con {jugada1} contra {"computadora"} con {jugada2}")
         else:
-            print(f"GANA {"COMPUTADORA"} con {jugada2} contra {"USUARIO"} con {jugada1}")
+            print(f"GANA {"COMPUTADORA"} con {jugada2} contra {"usuario"} con {jugada1}")
     else:
-        print("Los datos ingresados en las jugadas no son validos")
-
+        print("La jugada ingresada NO es valida")
 elif opcion_elegida == "2":
-    pc_nro = random.randint(1,10)
+    pc_nro = random.randint(1, 10)
     intentos = 3
     ganaste = False
     while intentos > 0 and not ganaste:
-            if intentos == 1:
-                numero = int(input(f"Te queda {intentos} intento, Ingresa tu número del 1 al 10: "))
-            elif intentos == 2 or intentos == 3:
-                numero = int(input(f"Te quedan {intentos} intentos, Ingresa tu número del 1 al 10: "))
-            if pc_nro == numero:
-                if intentos == 3:
-                    print("¡A LA PRIMERA ADIVINASTE!, LOCURAAAA")
-                else:
-                    print("¡ADIVINASTE GENI@, FELICITACIONES!")
-                ganaste = True
+        if intentos == 1:
+            numero = int(input(f"Te queda {intentos} intento, Ingresa tu número del 1 al 10: "))
+        else:
+            numero = int(input(f"Te quedan {intentos} intentos, Ingresa tu número del 1 al 10: "))
+        if pc_nro == numero:
+            if intentos == 3:
+                print("¡A LA PRIMERA ADIVINASTE!, LOCURAAAA")
             else:
-                intentos -= 1
-    print("Perdiste pero no pasa nada rey")
+                print("¡ADIVINASTE GENI@, FELICITACIONES!")
+            ganaste = True
+        else:
+            intentos -= 1
+            if numero < pc_nro:
+                print("INCORRECTO, intenta con un numero mas grande")
+            else:
+                print("INCORRECTO, intenta con un numero mas chico")
+    if not ganaste:
+        print(f"Perdiste. El número era el {pc_nro}")
+elif opcion_elegida == "1":
+    for i in range(7):
+        orden = random.randint(1,7)
+        match orden:
+            case 1:
+                print("¿Cuál es el gentilicio de los habitantes de la ciudad de Buenos Aires?")
+                print("1) Bonaerense 2) Porteño 3) Bonaireño 4) Airense")
+                respuesta_1 = int(input("Ingrese el numero de la opcion correcta: "))
+                if respuesta_1 == 2:
+                    print("CORRECTOOO")
+                else:
+                    print("INCORRECTO")
+            case 2:
+                print("¿Cuántas provincias tiene Argentina?")
+                print("1) 24  2) 22 3) 25 4) 23")
+                respuesta_2 = int(input("Ingrese el numero de la opcion correcta: "))   
+                if respuesta_2 == 4:
+                    print("CORRECTOOO")
+                else:
+                    print("INCORRECTO")
+            case 3:
+                print("¿Cuál es la provincia más pequeña de Argentina?")
+                print("1) Mendoza 2) Salta 3) Tucumán 4) Rosario")
+                respuesta_3 = int(input("Ingrese el numero de la opcion correcta: "))
+                if respuesta_3 == 3:
+                    print("CORRECTOOO")
+                else:
+                    print("INCORRECTO")
+            case 4:
+                print("¿Cuál de estos famosos autores NO es argentino?")
+                print("1) Julio Cortázar 2) Pablo Neruda 3) Jorge Luis Borges 4) Alejandra Pizarnik")
+                respuesta_4 = int(input("Ingrese el numero de la opcion correcta: "))
+                if respuesta_4 == 2:
+                    print("CORRECTOOO")
+                else:
+                    print("INCORRECTO")
+            case 5:
+                print("¿En qué fecha se independizó Argentina?")
+                print("1) 9 de junio de 1816 2) 9 de julio de 1916 3) 9 de junio de 1916 4) 9 de julio de 1816")
+                respuesta_5 = int(input("Ingrese el numero de la opcion correcta: "))
+                if respuesta_5 == 4:
+                    print("CORRECTOOO")
+                else:
+                    print("INCORRECTO")
+            case 6:
+                print("En Argentina se halla la montaña más alta del continente americano ¿cuál es?")
+                print("1) El volcán Llullaillaco, en la Provincia de Salta. 2) El nevado Tres Cruces, en la Provincia de Catamarca. 3) El cerro Aconcagua, en la Provincia de Mendoza. 4) El cerro Ramada, en la Provincia de San Juan.")
+                respuesta_6 = int(input("Ingrese el numero de la opcion correcta: "))
+                if respuesta_6 == 3:
+                    print("CORRECTOOO")
+                else:
+                    print("INCORRECTO")
+            case 7:
+                print("¿Con cuántos países comparte Argentina fronteras terrestres?")
+                print("1) 3  2) 4 3) 5 4) 2")
+                respuesta_7 = int(input("Ingrese el numero de la opcion correcta: "))
+                if respuesta_7 == 3:
+                    print("CORRECTOOO")
+                else:
+                    print("INCORRECTO")
