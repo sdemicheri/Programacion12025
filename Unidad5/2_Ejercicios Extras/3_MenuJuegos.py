@@ -1,11 +1,11 @@
-#--- Código para mostrar el menú ---
-print("-" * 20)
+
+print("-"*20)
 print("  MENÚ DE JUEGOS  ")
-print("-" * 20)
+print("-"*20)
 print("\n")
-print("1. Verdadero o Falso")
+print("1. Verdadero o Falso - Argentina")
 print("2. Adivina el Número")
-print("3. [Nombre del tercer juego]")
+print("3. Piedra Papel o Tijera - Computadora")
 print("\n")
 
 opcion_elegida = input("Elige un juego (ingresa el número) o '0' para salir: ")
@@ -15,7 +15,7 @@ if opcion_elegida == "1":
 elif opcion_elegida == "2":
     print(f"!Elegiste Adivina el número!")
 elif opcion_elegida == "3":
-    print(f"¡Elegiste ...!")
+    print(f"¡Elegiste Juego de Dados!")
 elif opcion_elegida == "0":
     print(f"Fin del programa")
 else:
