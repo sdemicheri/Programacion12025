@@ -94,7 +94,6 @@ elif opcion_elegida == "1":
         print("-"*44)
         print("Iniciando: 'Trivia Argentina' ¡Buena suerte!")
         print("-"*44)
-        print("")
         pregunta1_usada = False
         pregunta2_usada = False
         pregunta3_usada = False
@@ -102,81 +101,169 @@ elif opcion_elegida == "1":
         pregunta5_usada = False
         pregunta6_usada = False
         pregunta7_usada = False
-        for i in range(7):
-            orden = random.randint(1, 7)
+        pregunta8_usada = False
+        pregunta9_usada = False
+        pregunta10_usada = False
+        pregunta11_usada = False
+        pregunta12_usada = False
+        pregunta13_usada = False
+        pregunta14_usada = False
+        pregunta15_usada = False
+        for i in range(15):
+            orden = random.randint(1, 15)
             while (orden == 1 and pregunta1_usada == True) or \
                 (orden == 2 and pregunta2_usada == True) or \
                 (orden == 3 and pregunta3_usada == True) or \
                 (orden == 4 and pregunta4_usada == True) or \
                 (orden == 5 and pregunta5_usada == True) or \
                 (orden == 6 and pregunta6_usada == True) or \
-                (orden == 7 and pregunta7_usada == True):
-                orden = random.randint(1, 7)
+                (orden == 7 and pregunta7_usada == True) or \
+                (orden == 8 and pregunta8_usada == True) or \
+                (orden == 9 and pregunta9_usada == True) or \
+                (orden == 10 and pregunta10_usada == True) or \
+                (orden == 11 and pregunta11_usada == True) or \
+                (orden == 12 and pregunta12_usada == True) or \
+                (orden == 13 and pregunta13_usada == True) or \
+                (orden == 14 and pregunta14_usada == True) or \
+                (orden == 15 and pregunta15_usada == True):
+                orden = random.randint(1, 15)
             print("")
             match orden:
                     case 1:
                         print("¿Cuál es el gentilicio de los habitantes de la ciudad de Buenos Aires?")
-                        print("1) Bonaerense 2) Porteño 3) Bonaireño 4) Airense")
-                        respuesta_1 = int(input("Ingrese el numero de la opcion correcta: "))
-                        if respuesta_1 == 2:
+                        print("a) Bonaerense b) Porteño c) Bonaireño d) Airense")
+                        respuesta_1 = input("Ingrese la letra de la opción correcta: ").lower()
+                        if respuesta_1 == "b":
                             print("CORRECTOOO")
                         else:
                             print("INCORRECTO")
                         pregunta1_usada = True
                     case 2:
                         print("¿Cuántas provincias tiene Argentina?")
-                        print("1) 24  2) 22 3) 25 4) 23")
-                        respuesta_2 = int(input("Ingrese el numero de la opcion correcta: "))   
-                        if respuesta_2 == 4:
+                        print("a) 22 b) 23 c) 24 d) 25")
+                        respuesta_2 = input("Ingrese la letra de la opción correcta: ").lower()   
+                        if respuesta_2 == "b":
                             print("CORRECTOOO")
                         else:
                             print("INCORRECTO")
                         pregunta2_usada = True
                     case 3:
                         print("¿Cuál es la provincia más pequeña de Argentina?")
-                        print("1) Mendoza 2) Salta 3) Tucumán 4) Rosario")
-                        respuesta_3 = int(input("Ingrese el numero de la opcion correcta: "))
-                        if respuesta_3 == 3:
+                        print("a) Tucumán b) Jujuy c) Misiones  d) Entre Rios")
+                        respuesta_3 = input("Ingrese la letra de la opción correcta: ").lower()
+                        if respuesta_3 == "a":
                             print("CORRECTOOO")
                         else:
                             print("INCORRECTO")
                         pregunta3_usada = True
                     case 4:
                         print("¿Cuál de estos famosos autores NO es argentino?")
-                        print("1) Julio Cortázar 2) Pablo Neruda 3) Jorge Luis Borges 4) Alejandra Pizarnik")
-                        respuesta_4 = int(input("Ingrese el numero de la opcion correcta: "))
-                        if respuesta_4 == 2:
+                        print("a) Julio Cortázar b) Pablo Neruda c) Jorge Luis Borges d) Alejandra Pizarnik")
+                        respuesta_4 = input("Ingrese la letra de la opción correcta: ").lower()
+                        if respuesta_4 == "b":
                             print("CORRECTOOO")
                         else:
                             print("INCORRECTO")
                         pregunta4_usada = True
                     case 5:
                         print("¿En qué fecha se independizó Argentina?")
-                        print("1) 9 de junio de 1816 2) 9 de julio de 1916 3) 9 de junio de 1916 4) 9 de julio de 1816")
-                        respuesta_5 = int(input("Ingrese el numero de la opcion correcta: "))
-                        if respuesta_5 == 4:
+                        print("a) 9 de junio de 1816 b) 9 de julio de 1916 c) 9 de junio de 1916 d) 9 de julio de 1816")
+                        respuesta_5 = input("Ingrese la letra de la opcion correcta: ").lower()
+                        if respuesta_5 == "d":
                             print("CORRECTOOO")
                         else:
                             print("INCORRECTO")
                         pregunta5_usada = True
                     case 6:
-                        print("En Argentina se halla la montaña más alta del continente americano ¿cuál es?")
-                        print("1) El volcán Llullaillaco, en Salta. 2) El nevado Tres Cruces, en Catamarca. 3) El cerro Aconcagua, en Mendoza. 4) El cerro Ramada, en San Juan.")
-                        respuesta_6 = int(input("Ingrese el numero de la opcion correcta: "))
-                        if respuesta_6 == 3:
+                        print("¿Cuál de las siguientes montañas, es la más alta del continente americano?")
+                        print("a) El volcán Llullaillaco, en Salta. b) El nevado Tres Cruces, en Catamarca. c) El cerro Aconcagua, en Mendoza. d) El cerro Ramada, en San Juan.")
+                        respuesta_6 = input("Ingrese la letra de la opción correcta: ").lower()
+                        if respuesta_6 == "c":
                             print("CORRECTOOO")
                         else:
                             print("INCORRECTO")
                         pregunta6_usada = True
                     case 7:
-                        print("¿Con cuántos países comparte Argentina fronteras terrestres?")
-                        print("1) 3  2) 4 3) 5 4) 2")
-                        respuesta_7 = int(input("Ingrese el numero de la opcion correcta: "))
-                        if respuesta_7 == 3:
+                        print("¿Con cuántos países limita Argentina?")
+                        print("a) 2 b) 3 c) 4 d) 5")
+                        respuesta_7 = input("Ingrese la letra de la opción correcta: ").lower()
+                        if respuesta_7 == "d":
                             print("CORRECTOOO")
                         else:
                             print("INCORRECTO")
                         pregunta7_usada = True
+                    case 8:
+                        print("¿En qué años tuvo lugar la dictadura militar?")
+                        print("a) 1970 a 1987 b) 1978 a 1980 c) 1972 a 1984 d) 1976 a 1983")
+                        respuesta_8 = input("Ingrese la letra de la opción correcta: ").lower()
+                        if respuesta_8 == "d":
+                            print("CORRECTOOO")
+                        else:
+                            print("INCORRECTO")
+                        pregunta8_usada = True
+                    case 9:
+                        print("¿Dónde se encuentra la región patagónica?")
+                        print("a) En el norte b) En el oeste c) En el sur d) En el centro")
+                        respuesta_9 = input("Ingrese la letra de la opción correcta: ").lower()
+                        if respuesta_9 == "c":
+                            print("CORRECTOOO")
+                        else:
+                            print("INCORRECTO")
+                        pregunta9_usada = True
+                    case 10:
+                        print("¿Cómo se le conoce a la selección de fútbol argentina?")
+                        print("a) La del che b) La albiceleste c) Los tangos d) La fiera celeste")
+                        respuesta_10 = input("Ingrese la letra de la opción correcta: ").lower()
+                        if respuesta_10 == "b":
+                            print("CORRECTOOO")
+                        else:
+                            print("INCORRECTO")
+                        pregunta10_usada = True
+                    case 11:
+                        print("¿Cuál es el nombre de la famosa niña de la historieta de Quino?")
+                        print("a) Matilda  b) Mafalda c) Susanita d) Manuelita")
+                        respuesta_11 = input("Ingrese la letra de la opción correcta: ").lower()
+                        if respuesta_11 == "b":
+                            print("CORRECTOOO")
+                        else:
+                            print("INCORRECTO")
+                        pregunta11_usada = True
+                    case 12:
+                        print("¿Por que es famoso el rio de la plata?")
+                        print("a) Mas ancho del mundo b) Mas claro del mundo c) Mas largo del mundo d) Mas hermoso del mundo")
+                        respuesta_12 = input("Ingrese la letra de la opción correcta: ").lower()
+                        if respuesta_12 == "a":
+                            print("CORRECTOOO")
+                        else:
+                            print("INCORRECTO")
+                        pregunta12_usada = True
+                    case 13:
+                        print("¿Cuantos premios Nobel han sido ganados por argentinos?")
+                        print("a) 2 b) 3 c) 4 d) 5")
+                        respuesta_13 = input("Ingrese la letra de la opción correcta: ").lower()
+                        if respuesta_13 == "d":
+                            print("CORRECTOOO")
+                        else:
+                            print("INCORRECTO")
+                        pregunta13_usada = True
+                    case 14:
+                        print("¿Cuantos golpes de estado hubo en Argentina?")
+                        print("a) 3 b) 5 c) 6 d) 8")
+                        respuesta_14 = input("Ingrese la letra de la opción correcta: ").lower()
+                        if respuesta_14 == "c":
+                            print("CORRECTOOO")
+                        else:
+                            print("INCORRECTO")
+                        pregunta14_usada = True
+                    case 15:
+                        print("¿Cual es la principal exportacion de Argentina?")
+                        print("a) Soja b) Petroleo c) Mani d) Oro")
+                        respuesta_15 = input("Ingrese la letra de la opción correcta: ").lower()
+                        if respuesta_15 == "a":
+                            print("CORRECTOOO")
+                        else:
+                            print("INCORRECTO")
+                        pregunta15_usada = True
         print("")
         seguir_jugando_1 = input("Desea volver a jugar? y/n: ")
         match seguir_jugando_1:
