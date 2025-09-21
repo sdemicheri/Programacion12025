@@ -12,8 +12,8 @@ opcion_elegida = input("Elige un juego (ingresa el número) o '0' para salir: ")
 print("")
 match opcion_elegida:
     case "3":
-        no_seguir_3 = False
-        while no_seguir_3 == False:
+        jugar_de_nuevo_3 = True
+        while jugar_de_nuevo_3 == True:
             print("-"*64)
             print("Iniciando: 'Piedra Papel o Tijera vs Computadora' ¡Buena suerte!")
             print("-"*64)
@@ -22,7 +22,11 @@ match opcion_elegida:
             gano_usuario = 0
             gano_computadora = 0
             while turnos > 0:
-                usuario = int(input("Eliga una jugada (ingrese el número) 1. Piedra 2. Papel 3. Tijera : "))
+                try:
+                    usuario = int(input("Eliga una jugada (ingrese el número) 1. Piedra 2. Papel 3. Tijera : "))
+                except ValueError:
+                    print("ERROR: ingrese el número correspondiente a su jugada: 1, 2 o 3")
+                    continue
                 if usuario == 1:
                     jugada1 = "piedra"
                 elif usuario == 2:
@@ -49,7 +53,7 @@ match opcion_elegida:
                         print(f"GANA {"COMPUTADORA"} con {jugada2} contra {"usuario"} con {jugada1}")
                         gano_computadora += 1
                 else:
-                    print("La jugada ingresada NO es valida")
+                    print("ERROR: ingrese el número correspondiente a su jugada: 1, 2 o 3")
                 print("")
             if gano_usuario > gano_computadora:
                 print(f"Ganador final: Usuario {gano_usuario} a {gano_computadora}")
@@ -63,14 +67,11 @@ match opcion_elegida:
             seguir_jugando_3 = input("Desea volver a jugar? y/n: ")
             print("")
             match seguir_jugando_3:
-                case "y":
-                    no_seguir_3 = False
                 case "n":
-                    no_seguir_3 = True
-                    print(f"FINALIZANDO EL PROGRAMA...")
+                    print("FINALIZANDO EL JUEGO...")
     case "2":
-        no_seguir_2 = False
-        while no_seguir_2 == False:
+        jugar_de_nuevo_2 = True
+        while jugar_de_nuevo_2 == True:
             print("-"*45)
             print("Iniciando: 'Adivina el número' ¡Buena suerte!")
             print("-"*45)
@@ -79,10 +80,14 @@ match opcion_elegida:
             intentos = 3
             ganaste = False
             while intentos > 0 and not ganaste:
-                if intentos == 1:
-                    numero = int(input(f"Te queda {intentos} intento, Ingresa tu número del 1 al 15: "))
-                else:
-                    numero = int(input(f"Te quedan {intentos} intentos, Ingresa tu número del 1 al 15: "))
+                try:
+                    if intentos == 1:
+                        numero = int(input(f"Te queda {intentos} intento, Ingresa tu número del 1 al 15: "))
+                    else:
+                        numero = int(input(f"Te quedan {intentos} intentos, Ingresa tu número del 1 al 15: "))
+                except ValueError:
+                    print("ERROR: La entrada debe ser un número entre 1 y 15")
+                    continue
                 if pc_nro == numero:
                     if intentos == 3:
                         print("¡A LA PRIMERA ADIVINASTE!, LOCURAAAA")
@@ -100,12 +105,11 @@ match opcion_elegida:
                 print(f"Perdiste. El número era {pc_nro}")
             print("")
             seguir_jugando_2 = input("Desea volver a jugar? y/n: ")
+            print("")
             match seguir_jugando_2:
-                case "y":
-                    no_seguir_2 = False
                 case "n":
-                    no_seguir_2 = True
-                    print(f"FINALIZANDO EL PROGRAMA...")
+                    jugar_de_nuevo_2 = False
+                    print("FINALIZANDO EL JUEGO...")
     case "1":
         jugar_de_nuevo_1 = True
         while jugar_de_nuevo_1 == True:
@@ -239,18 +243,19 @@ match opcion_elegida:
                         respuesta_correcta = "a"
                         pregunta15_usada = True
                 if respuesta_usuario == respuesta_correcta:
-                    print("CORRECTOOO")
+                    print("¡CORRECTOOO! ✅")
                     acertadas += 1
                 else:
-                    print("INCORRECTO")
+                    print(f"INCORRECTO ❌ La respuesta era la {respuesta_correcta})")
             print("")    
             print(f"El total de preguntas acertadas es de {acertadas}/15")
             print("")
             seguir_jugando_1 = input("Desea volver a jugar? y/n: ").lower()
             print("")
-            if seguir_jugando_1 != "y":        
-                jugar_de_nuevo_1 = False
-                print(f"FINALIZANDO EL PROGRAMA...")    
+            match seguir_jugando_1:
+                case "n":
+                    jugar_de_nuevo_1 = False
+                    print("FINALIZANDO EL JUEGO...")
     case "0":
         print(f"FINALIZANDO EL PROGRAMA...")
     case _:
