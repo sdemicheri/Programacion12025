@@ -21,9 +21,10 @@ try:
      jugada_2 = input("jugador numero 2 ingrese su jugada: ")
      print("")
      if( jugada_1 != "PIEDRA" or jugada_1 != "PAPEL" or jugada_1 != "TIJERA" or jugada_2 != "PIEDRA" or jugada_2 != "PAPEL" or jugada_2 != "TIJERA"):
-       print("no han puesto la jugada en mayuscula, por ello a ambos se les quitara un punto en este turno")
+       print("no han puesto bien la jugada, por ello a ambos se les quitara un punto en este turno")
        print("")
-     elif( jugada_1 == "PIEDRA"  and jugada_2 == "PAPEL"):
+
+     if( jugada_1 == "PIEDRA"  and jugada_2 == "PAPEL"):
        print("✊ vs ✋")
        print("Punto para el jugador 2")
        print("")
@@ -81,7 +82,7 @@ try:
    categoria = input("Elige una de las categoria: ")
    if( categoria != "HISTORIA" or categoria != "CINE" or categoria != "DEPORTES" or categoria != "MUSICA"):
      print("no ha puesto bien la categoria, porfavor vuelva a ejecutar el programa")
-   elif( categoria == "HISTORIA"):
+   if( categoria == "HISTORIA"):
      print("     ?????")
      print("   ?       ? ")  
      print("  ?   ^_^   ?")  
@@ -118,6 +119,7 @@ try:
        print("Correcto")
        puntos += 1
      else:
+       print("")
        print("incorrecto")
  
      print("")
@@ -423,7 +425,6 @@ try:
    else:
      print("Perdiste la ronda 1")
       
-   print(puntos)
      
    print("")
    print("Ronda 2")
@@ -445,7 +446,6 @@ try:
    else:
      print("Perdiste la ronda 2")
  
-   print(puntos)
 
    print("")
    print("Ronda 3")
