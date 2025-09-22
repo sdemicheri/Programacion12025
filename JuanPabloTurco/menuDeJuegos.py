@@ -3,11 +3,11 @@ fin=False
 while fin==False:
     print("Bienvenido al menu, escribe un numero para elegir:")
     print("1 - Mayor/o/Menor")
-    print("2 - Piedra, Papel o Tijera")
+    print("2 - Resuelve la Incognita")
     print("3 - Adivinanza")
     print("0 - Cerrar el menu")
     juego=int(input())
-    if juego==1:
+    if juego==1:                    #MAYOR O MENOR
         fin=False
         numeroInicial=random.randint(0,1000)
         puntos=0
@@ -37,13 +37,28 @@ while fin==False:
         fin=False
 
 
-    elif juego==2:
-        print(("Lamento comunicarle que este juego esta en construccion"))
+    elif juego==2:             #RESOLVER INCOGNITA
+        puntos=0
+        fin=False
+        while fin==False:
+            numero1=random.randint(1,10)
+            numero2Secreto=random.randint(1,10)
+            producto=numero1*numero2Secreto
+            print("Que numero multiplicado por ", numero1, " da como producto: ", producto)
+            numeroElegido=int(input("Responde con un entero: "))
+            if numero2Secreto==numeroElegido:
+                print("Correcto!")
+                puntos+=100
+                input("presione enter para seguir completando incognitas")
+            else:
+                print("Incorrecto!")
+                fin=True
+        print("Ha conseguido", puntos, (" puntos!"))
         input("Presiona enter para volver al menu...")
 
 
-    elif juego==3:
-        print("Bienvenido al juego: ¡Adivina el numero!")
+    elif juego==3:             #ADIVINANZA
+        print("Bienvenido al juego: Adivinanza!")
         print("Se ha generado un numero del 1 al 100. Podes adivinar cual es?")
 
         numeroSecreto = random.randint(1, 100)
@@ -71,7 +86,7 @@ while fin==False:
         input("Presiona enter para volver al menu...")
 
 
-    elif juego==0:
+    elif juego==0:       #SALIR DEL MENU
         fin=True
     else:
         print("No hay una opcion con ese numero")
