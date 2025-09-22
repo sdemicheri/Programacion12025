@@ -1,19 +1,23 @@
 import random
+# PENDIENTE
+# corregir cuando pone 'enter' en las opciones (TRIVIA)
+# hacer que en medio de un juego pueda salir sin necesidad de terminarlo
+# mostrar el menú al salir de un juego
 print("-"*18)
 print("  MENÚ DE JUEGOS  ")
 print("-"*18)
 print("")
-print("1. Trivia Argentina")
+print("1. Piedra Papel o Tijera vs Computadora")
 print("2. Adivina el Número")
-print("3. Piedra Papel o Tijera vs Computadora")
-print("0. Salir")
+print("3. Trivia Argentina")
+print("0. Salir del programa")
 print("")
 opcion_elegida = input("Elige un juego (ingresa el número) o '0' para salir: ")
 print("")
 match opcion_elegida:
-    case "3":
-        jugar_de_nuevo_3 = True
-        while jugar_de_nuevo_3 == True:
+    case "1":
+        jugar_de_nuevo_1 = True
+        while jugar_de_nuevo_1 == True:
             print("-"*64)
             print("Iniciando: 'Piedra Papel o Tijera vs Computadora' ¡Buena suerte!")
             print("-"*64)
@@ -64,11 +68,12 @@ match opcion_elegida:
             else:
                 print(f"Empate {gano_usuario} a {gano_computadora}")
             print("")
-            seguir_jugando_3 = input("Desea volver a jugar? y/n: ")
+            seguir_jugando_1 = input("Desea volver a jugar? y/n: ")
             print("")
-            match seguir_jugando_3:
+            match seguir_jugando_1:
                 case "n":
                     print("FINALIZANDO EL JUEGO...")
+                    jugar_de_nuevo_1 = False
     case "2":
         jugar_de_nuevo_2 = True
         while jugar_de_nuevo_2 == True:
@@ -110,9 +115,9 @@ match opcion_elegida:
                 case "n":
                     jugar_de_nuevo_2 = False
                     print("FINALIZANDO EL JUEGO...")
-    case "1":
-        jugar_de_nuevo_1 = True
-        while jugar_de_nuevo_1 == True:
+    case "3":
+        jugar_de_nuevo_3 = True
+        while jugar_de_nuevo_3 == True:
             print("-"*44)
             print("Iniciando: 'Trivia Argentina' ¡Buena suerte!")
             print("-"*44)
@@ -250,11 +255,11 @@ match opcion_elegida:
             print("")    
             print(f"El total de preguntas acertadas es de {acertadas}/15")
             print("")
-            seguir_jugando_1 = input("Desea volver a jugar? y/n: ").lower()
+            seguir_jugando_3 = input("Desea volver a jugar? y/n: ").lower()
             print("")
-            match seguir_jugando_1:
+            match seguir_jugando_3:
                 case "n":
-                    jugar_de_nuevo_1 = False
+                    jugar_de_nuevo_3 = False
                     print("FINALIZANDO EL JUEGO...")
     case "0":
         print(f"FINALIZANDO EL PROGRAMA...")
