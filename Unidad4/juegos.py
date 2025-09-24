@@ -1,6 +1,6 @@
 #MENÚ DE JUEGOS
 salir = False
-while not salir:
+while salir == False:
     print("------------------------")
     print("Bienvenido al menú principal")
     print("1) Piedra, papel o tijeras")
@@ -20,10 +20,12 @@ while not salir:
        print("3 Tijera")
        print("------------------------")
        ganador = False
-       while not ganador:
+       while ganador == False:
          jugador1= int(input("Jugador 1, elige tu opción (1-3): "))
          jugador2= int(input("Jugador 2, elige tu opción (1-3): "))
-         if jugador1 == jugador2:
+         if jugador1 < 1 or jugador1 > 3 and jugador2 < 1 or jugador2 > 3:
+            print("Ingresó una opción incorrecta. Vuelva a intentarlo ")
+         elif jugador1 == jugador2:
             print("Empate, jueguen de nuevo ")
          elif jugador1 == 1 and jugador2 == 3 or jugador1 == 2 and jugador2 == 1 or jugador1 == 3 and jugador2 == 2:
             print("Jugador 1 gana ")
@@ -47,7 +49,10 @@ while not salir:
          print("3) Australia")
          print("4) Groenlandia")
          respuesta = int(input("Seleccione una opción "))
-         if respuesta == 4:
+         if respuesta < 1 or respuesta > 4:
+            print("Ingreso una respuesta incorrecta ")
+            break
+         elif respuesta == 4:
             print("Correcto")
             puntaje += 1
          else:
@@ -126,10 +131,12 @@ while not salir:
          print("La consola, tu archienemiga en este juego pensó un número del 1 al 20...¿te atreves a retarla?")
          print("------------------------")
          numero_secreto = random.randint(1,20)
-         intentos = 0
+         intentos = 0 
          adivinado = False
-         while not adivinado:
+         while adivinado == False:
             intento= int(input("Ingresa el número que pensaste: "))
+            if intento < 0:
+               print("Ingreso un dato no válido. Intente de nuevo")
             intentos += 1
             if intento == numero_secreto:
                print("¡Correcto! El número era ", numero_secreto)
