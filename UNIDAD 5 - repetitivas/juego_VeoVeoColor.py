@@ -1,9 +1,18 @@
+def main():
+    print("=== Juego 3 ===")
+    nombre = input("Tu nombre: ")
+    print(f"Hola {nombre}, Bienvenido al juego 3!")
+    input("Presiona 0 er para volver al menú...")
+
+if __name__ == "__main__":
+    main()
+
 import random
 colores_primarios = ["Rojo", "Azul", "Amarillo"]
 colores_secundarios = ["Verde", "Naranja", "Violeta"]
 colores = colores_primarios + colores_secundarios
 
-print("¡Bienvenidos al VEO VEO de colores primarios y secundarios!")
+print("Bienvenidos al VEO VEO de colores primarios y secundarios! 🎨 ")
 
 while True:  # bucle principal, se repite hasta que el jugador diga "no"
     pregunta_inicio = input("¿Querés jugar al VEO VEO de colores? (si/no): ")

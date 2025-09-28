@@ -1,3 +1,12 @@
+def main():
+    print("=== Juego 2 ===")
+    nombre = input("Tu nombre: ")
+    print(f"Hola {nombre}, Bienvenido al juego 2!")
+    input("Presiona 0 para volver al menú...")
+
+if __name__ == "__main__":
+    main()
+
 import random
 numero_secreto = random.randint(1, 10)
 intentos = 0
