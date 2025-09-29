@@ -12,16 +12,20 @@
 #Si son 3 o 4 personas: 5% de descuento
 #Si son menos de 3: sin descuento
 
-
 #FUNCIONES
-def Aplicar_descuento(monto_total, cantidad_personas):
+def aplicarDescuento(monto_total, cantidad_personas):
+    montoConDescuento = 0
     if cantidad_personas >=5: 
         descuento = monto_total*10/100
+        montoConDescuento = monto_total - descuento
     elif cantidad_personas == 3 or cantidad_personas == 4: 
         descuento = monto_total*5/100
+        montoConDescuento = monto_total - descuento
     elif cantidad_personas < 3:
-        print("No hay descuento para esa cantidad de personas. Gracias por utilizarnos.")
-
+        montoConDescuento = monto_total
+    return montoConDescuento
 
 cantidad_personas = int(input("Ingrese la cantidad de personas: "))
 monto_total = float(input("Ingrese el monto total de lo gastado: "))
+resultado = aplicarDescuento (monto_total, cantidad_personas)
+print(resultado)
