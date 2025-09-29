@@ -103,6 +103,13 @@ def validarPositivo():
     except ValueError:
         print("Ingresó un dato no válido")
         return 0   
+
+def calcularPeajes(cantidad):  
+    costo_total = 0
+    for i in range(cantidad):
+        peajes = float(input("Ingrese el monto:"))
+        costo_total += peajes
+    return costo_total
 # ============================================================================
 # PROGRAMA PRINCIPAL
 # ============================================================================
@@ -126,12 +133,12 @@ def main():
     
     """costo_combustible = calcularCombustible(kilometros, consumo, precio_litro)
     print(f"\nCosto de combustible : ${costo_combustible:.2f}")
-    
+    """
     print("Ingrese la cantidad de peajes a pasar:")
     cant_peajes = int(validarPositivo())
     costo_peajes = calcularPeajes(cant_peajes)
     print(f"\nCosto de peajes: ${costo_peajes:.2f}")
-    
+    """
     print("Ingrese la cantidad de días del viaje:")
     dias = validarPositivo()
     
