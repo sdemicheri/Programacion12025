@@ -1,0 +1,71 @@
+'''
+Necesitas desarrollar un sistema simple para gestionar las calificaciones de estudiantes de una materia. El sistema permitirá registrar notas, calcular promedios y generar estadísticas básicas.
+Funcionalidades a Implementar
+Cada estudiante o grupo pequeño debe implementar UNA de las siguientes funciones. Luego integraremos todas en un programa principal.
+Función 1: validarNota()
+
+Responsable: Estudiante/Grupo A
+Descripción: Solicita al usuario que ingrese una nota y valida que esté entre 0 y 10.
+Entrada: Ninguna (solicita datos por teclado)
+Salida: Retorna la nota válida (número entre 0 y 10)
+Lógica: Usar estructura repetitiva para seguir pidiendo la nota hasta que sea válida.
+
+Función 2: calcularPromedio()
+
+Responsable: Estudiante/Grupo B
+Descripción: Calcula el promedio de N notas ingresadas.
+Entrada: Cantidad de notas a promediar
+Salida: Retorna el promedio calculado
+Lógica: Usar estructura repetitiva para sumar las notas y dividir por la cantidad.
+
+Función 3: determinarCondicion()
+
+Responsable: Estudiante/Grupo C
+Descripción: Determina si un estudiante está "Aprobado" (>=6), "Desaprobado" (<4) o "Recuperatorio" (entre 4 y 6).
+Entrada: El promedio del estudiante
+Salida: Muestra en pantalla la condición
+Lógica: Usar estructura condicional para evaluar el promedio.
+
+Función 4: contarAprobados()
+
+Responsable: Estudiante/Grupo D
+Descripción: Cuenta cuántos estudiantes de un grupo están aprobados.
+Entrada: Cantidad de estudiantes
+Salida: Retorna la cantidad de aprobados
+Lógica: Usar repetitiva para procesar cada estudiante y condicional para verificar si aprobó (>=6).
+
+Función 5: encontrarMaximo()
+
+Responsable: Estudiante/Grupo E
+Descripción: Encuentra la nota más alta entre N notas.
+Entrada: Cantidad de notas a analizar
+Salida: Retorna la nota máxima
+Lógica: Usar repetitiva para comparar notas y guardar la mayor.
+
+Función 6: encontrarMinimo()
+
+Responsable: Estudiante/Grupo F
+Descripción: Encuentra la nota más baja entre N notas.
+Entrada: Cantidad de notas a analizar
+Salida: Retorna la nota mínima
+Lógica: Similar a encontrarMaximo pero buscando el mínimo.
+
+Función 7: generarReporte()
+
+Responsable: Estudiante/Grupo G
+Descripción: Muestra un reporte completo con todos los datos procesados.
+Entrada: promedio, condición, cantidad de aprobados, nota máxima, nota mínima
+Salida: Imprime en pantalla un reporte formateado
+Lógica: Usar estructura secuencial para mostrar la información.
+
+Integración Final
+El programa principal integrará todas las funciones:
+1. Solicitar cantidad de estudiantes
+2. Para cada estudiante:
+   - Usar validarNota() para ingresar sus notas
+   - Usar calcularPromedio() para obtener su promedio
+   - Usar determinarCondicion() para mostrar si aprobó
+3. Usar contarAprobados() para estadística general
+4. Usar encontrarMaximo() y encontrarMinimo() para las notas extremas
+5. Usar generarReporte() para mostrar resumen final
+'''
