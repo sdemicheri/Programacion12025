@@ -92,6 +92,28 @@ Programa Principal
 9. Dividir gastos con dividirGastos()
 10. Mostrar resumen con mostrarResumen()
 '''
+# importar funciones externas
+import calcularComidas
+# FUNCIONES
+def validarPositivo():
+    try:
+        valor = float(input())
+        while valor <= 0:
+            print("Ingresó un dato no válido, intente nuevamente")
+            valor = float(input())
+        return valor
+    except ValueError:
+        print("Ingresó un dato no válido")
+        return 0   
+
+def calcularPeajes(cantidad):  
+    costo_total = 0
+    for i in range(cantidad):
+        peajes = float(input("Ingrese el monto:"))
+        costo_total += peajes
+    return costo_total
+
+
 # ============================================================================
 # PROGRAMA PRINCIPAL
 # ============================================================================
@@ -113,9 +135,9 @@ def main():
     print("Ingrese el precio por litro de combustible:")
     precio_litro = validarPositivo()
     
-    costo_combustible = calcularCombustible(kilometros, consumo, precio_litro)
+    """costo_combustible = calcularCombustible(kilometros, consumo, precio_litro)
     print(f"\nCosto de combustible : ${costo_combustible:.2f}")
-    
+    """
     print("Ingrese la cantidad de peajes a pasar:")
     cant_peajes = int(validarPositivo())
     costo_peajes = calcularPeajes(cant_peajes)
@@ -127,9 +149,9 @@ def main():
     print("Ingrese el presupuesto diario por persona para comidas:")
     presupuesto_diario = validarPositivo()
     
-    costo_comidas = calcularComidas(cantidad_personas, dias, presupuesto_diario)
+    costo_comidas = calcularComidas.calcularComidas(cantidad_personas, dias, presupuesto_diario)
     print(f"\nCosto en comidas: ${costo_comidas:.2f}")
-    
+    """
     print("Ingrese la cantidad de noches de alojamiento:")
     noches = validarPositivo()
     
@@ -147,7 +169,7 @@ def main():
     
     mostrarResumen(costo_combustible, costo_peajes, costo_comidas, costo_alojamiento, 
                    total_sin_descuento, total_con_descuento, pago_por_persona, cantidad_personas)
-    
+    """
     print("Gracias!!! y Buen viaje! 🚗")
 
       
