@@ -92,6 +92,17 @@ Programa Principal
 9. Dividir gastos con dividirGastos()
 10. Mostrar resumen con mostrarResumen()
 '''
+# FUNCIONES
+def validarPositivo():
+    try:
+        valor = float(input())
+        while valor <= 0:
+            print("Ingresó un dato no válido, intente nuevamente")
+            valor = float(input())
+        return valor
+    except ValueError:
+        print("Ingresó un dato no válido")
+        return 0   
 # ============================================================================
 # PROGRAMA PRINCIPAL
 # ============================================================================
@@ -113,7 +124,7 @@ def main():
     print("Ingrese el precio por litro de combustible:")
     precio_litro = validarPositivo()
     
-    costo_combustible = calcularCombustible(kilometros, consumo, precio_litro)
+    """costo_combustible = calcularCombustible(kilometros, consumo, precio_litro)
     print(f"\nCosto de combustible : ${costo_combustible:.2f}")
     
     print("Ingrese la cantidad de peajes a pasar:")
@@ -147,7 +158,7 @@ def main():
     
     mostrarResumen(costo_combustible, costo_peajes, costo_comidas, costo_alojamiento, 
                    total_sin_descuento, total_con_descuento, pago_por_persona, cantidad_personas)
-    
+    """
     print("Gracias!!! y Buen viaje! 🚗")
 
       
