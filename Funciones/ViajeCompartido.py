@@ -92,6 +92,9 @@ Programa Principal
 9. Dividir gastos con dividirGastos()
 10. Mostrar resumen con mostrarResumen()
 '''
+# importar funciones externas
+import calcularComidas
+import AplicarDescuento
 # FUNCIONES
 def validarPositivo():
     try:
@@ -103,6 +106,17 @@ def validarPositivo():
     except ValueError:
         print("Ingresó un dato no válido")
         return 0   
+
+def calcularPeajes(cantidad):  
+    costo_total = 0
+    for i in range(cantidad):
+        peajes = float(input("Ingrese el monto:"))
+        costo_total += peajes
+    return costo_total
+
+def calcularAlojamiento(noches,precio):
+    preciototal=noches*precio
+    return preciototal
 # ============================================================================
 # PROGRAMA PRINCIPAL
 # ============================================================================
@@ -126,7 +140,7 @@ def main():
     
     """costo_combustible = calcularCombustible(kilometros, consumo, precio_litro)
     print(f"\nCosto de combustible : ${costo_combustible:.2f}")
-    
+    """
     print("Ingrese la cantidad de peajes a pasar:")
     cant_peajes = int(validarPositivo())
     costo_peajes = calcularPeajes(cant_peajes)
@@ -138,7 +152,7 @@ def main():
     print("Ingrese el presupuesto diario por persona para comidas:")
     presupuesto_diario = validarPositivo()
     
-    costo_comidas = calcularComidas(cantidad_personas, dias, presupuesto_diario)
+    costo_comidas = calcularComidas.calcularComidas(cantidad_personas, dias, presupuesto_diario)
     print(f"\nCosto en comidas: ${costo_comidas:.2f}")
     
     print("Ingrese la cantidad de noches de alojamiento:")
@@ -149,11 +163,12 @@ def main():
     
     costo_alojamiento = calcularAlojamiento(noches, precio_noche)
     print(f"\nCosto total de alojamiento: ${costo_alojamiento:.2f}")
-    
+    costo_combustible = 0
     total_sin_descuento = costo_combustible + costo_peajes + costo_comidas + costo_alojamiento
     
-    total_con_descuento = aplicarDescuento(total_sin_descuento, cantidad_personas)
-    
+    total_con_descuento = AplicarDescuento.aplicarDescuento(total_sin_descuento, cantidad_personas)
+    print(total_con_descuento)
+    """
     pago_por_persona = dividirGastos(total_con_descuento, cantidad_personas)
     
     mostrarResumen(costo_combustible, costo_peajes, costo_comidas, costo_alojamiento, 
