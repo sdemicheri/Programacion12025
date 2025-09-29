@@ -1,7 +1,14 @@
+# ============================================================================
+# ENUNCIADO PARA TRABAJAR EN CLASE 13/10/2025
+# ============================================================================
+
 '''
-Necesitas desarrollar un sistema simple para gestionar las calificaciones de estudiantes de una materia. El sistema permitirá registrar notas, calcular promedios y generar estadísticas básicas.
+Necesitas desarrollar un sistema simple para gestionar las calificaciones de estudiantes de una materia. 
+El sistema permitirá registrar notas, calcular promedios y generar estadísticas básicas.
 Funcionalidades a Implementar
-Cada estudiante o grupo pequeño debe implementar UNA de las siguientes funciones. Luego integraremos todas en un programa principal.
+Cada estudiante o grupo pequeño debe implementar UNA de las siguientes funciones. 
+Luego integraremos todas en un programa principal.
+
 Función 1: validarNota()
 
 Responsable: Estudiante/Grupo A
