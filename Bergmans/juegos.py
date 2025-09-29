@@ -49,23 +49,23 @@ while menu_principal == "continuar":
     elif opcion == '2':
         print("¡JUGUEMOS PIEDRA PAPEL O TIJERA!")
 
-        # DATOS DEL JUGADOR 1
+        
        
         jugada_1 = input(" escriba su jugada (piedra, papel, tijera): ")
 
-        # DATOS DEL JUGADOR 2
+        
        
         jugada_2 = input( "escriba su jugada (piedra, papel, tijera): ")
-            # COMPROBAR QUE LA JUGADA SEA VÁLIDA
+            
         if (jugada_1 in ["piedra", "papel", "tijera"]) and (jugada_2 in ["piedra", "papel", "tijera"]):
-                if jugada_1 == jugada_2: # EN CASO DE UN EMPATE
+                if jugada_1 == jugada_2: 
                     print(f"EMPATE, ambos eligieron {jugada_1}")
-                # EN CASO DE QUE EL JUGADOR 1 GANE
+               
                 elif (jugada_1 == "piedra" and jugada_2 == "tijera") or \
                     (jugada_1 == "papel" and jugada_2 == "piedra") or \
                     (jugada_1 == "tijera" and jugada_2 == "papel"):
                     print(f" {jugada_1} contra {jugada_2}.")
-                # SI NO GANA EL JUGADOR 1 NI HAY EMPATE, GANA EL JUGADOR 2
+                
                 else:
                     print(f"GANA  con {jugada_2} contra {jugada_1}.")
         else:
