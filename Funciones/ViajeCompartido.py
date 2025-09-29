@@ -92,6 +92,8 @@ Programa Principal
 9. Dividir gastos con dividirGastos()
 10. Mostrar resumen con mostrarResumen()
 '''
+# importar funciones externas
+import calcularComidas
 # FUNCIONES
 def validarPositivo():
     try:
@@ -110,6 +112,8 @@ def calcularPeajes(cantidad):
         peajes = float(input("Ingrese el monto:"))
         costo_total += peajes
     return costo_total
+
+
 # ============================================================================
 # PROGRAMA PRINCIPAL
 # ============================================================================
@@ -138,16 +142,16 @@ def main():
     cant_peajes = int(validarPositivo())
     costo_peajes = calcularPeajes(cant_peajes)
     print(f"\nCosto de peajes: ${costo_peajes:.2f}")
-    """
+    
     print("Ingrese la cantidad de días del viaje:")
     dias = validarPositivo()
     
     print("Ingrese el presupuesto diario por persona para comidas:")
     presupuesto_diario = validarPositivo()
     
-    costo_comidas = calcularComidas(cantidad_personas, dias, presupuesto_diario)
+    costo_comidas = calcularComidas.calcularComidas(cantidad_personas, dias, presupuesto_diario)
     print(f"\nCosto en comidas: ${costo_comidas:.2f}")
-    
+    """
     print("Ingrese la cantidad de noches de alojamiento:")
     noches = validarPositivo()
     
