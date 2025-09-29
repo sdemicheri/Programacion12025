@@ -113,6 +113,10 @@ def calcularPeajes(cantidad):
         costo_total += peajes
     return costo_total
 
+def calcularAlojamiento(noches,precio):
+    preciototal=noches*precio
+    return preciototal
+
 
 # ============================================================================
 # PROGRAMA PRINCIPAL
@@ -151,7 +155,7 @@ def main():
     
     costo_comidas = calcularComidas.calcularComidas(cantidad_personas, dias, presupuesto_diario)
     print(f"\nCosto en comidas: ${costo_comidas:.2f}")
-    """
+    
     print("Ingrese la cantidad de noches de alojamiento:")
     noches = validarPositivo()
     
@@ -160,7 +164,7 @@ def main():
     
     costo_alojamiento = calcularAlojamiento(noches, precio_noche)
     print(f"\nCosto total de alojamiento: ${costo_alojamiento:.2f}")
-    
+    """
     total_sin_descuento = costo_combustible + costo_peajes + costo_comidas + costo_alojamiento
     
     total_con_descuento = aplicarDescuento(total_sin_descuento, cantidad_personas)
