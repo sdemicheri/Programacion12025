@@ -1,8 +1,6 @@
 
-def dividirGastos():
- b = int(input("Ingrese el gasto: "))
- c = int(input("ingrese la cantidad de personas: ")) 
- a = b / c
+def dividirGastos(monto, personas):
+ a = monto / personas
  return a
 
-print("cada persona debe pagar:", dividirGastos())
+print("cada persona debe pagar:", dividirGastos(1000, 10))

@@ -94,6 +94,7 @@ Programa Principal
 '''
 # importar funciones externas
 import calcularComidas
+import Funcion_6
 import AplicarDescuento
 # FUNCIONES
 def validarPositivo():
@@ -168,9 +169,10 @@ def main():
     
     total_con_descuento = AplicarDescuento.aplicarDescuento(total_sin_descuento, cantidad_personas)
     print(total_con_descuento)
-    """
-    pago_por_persona = dividirGastos(total_con_descuento, cantidad_personas)
     
+    pago_por_persona = Funcion_6.dividirGastos(total_con_descuento, cantidad_personas)
+    print(pago_por_persona)
+    """
     mostrarResumen(costo_combustible, costo_peajes, costo_comidas, costo_alojamiento, 
                    total_sin_descuento, total_con_descuento, pago_por_persona, cantidad_personas)
     """
