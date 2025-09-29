@@ -24,8 +24,8 @@ def aplicarDescuento(monto_total, cantidad_personas):
     elif cantidad_personas < 3:
         montoConDescuento = monto_total
     return montoConDescuento
-
-cantidad_personas = int(input("Ingrese la cantidad de personas: "))
-monto_total = float(input("Ingrese el monto total de lo gastado: "))
-resultado = aplicarDescuento (monto_total, cantidad_personas)
-print(resultado)
+if __name__ == "__main__":
+    cantidad_personas = int(input("Ingrese la cantidad de personas: "))
+    monto_total = float(input("Ingrese el monto total de lo gastado: "))
+    resultado = aplicarDescuento (monto_total, cantidad_personas)
+    print(resultado)

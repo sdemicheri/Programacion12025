@@ -94,6 +94,7 @@ Programa Principal
 '''
 # importar funciones externas
 import calcularComidas
+import AplicarDescuento
 # FUNCIONES
 def validarPositivo():
     try:
@@ -116,8 +117,6 @@ def calcularPeajes(cantidad):
 def calcularAlojamiento(noches,precio):
     preciototal=noches*precio
     return preciototal
-
-
 # ============================================================================
 # PROGRAMA PRINCIPAL
 # ============================================================================
@@ -164,11 +163,12 @@ def main():
     
     costo_alojamiento = calcularAlojamiento(noches, precio_noche)
     print(f"\nCosto total de alojamiento: ${costo_alojamiento:.2f}")
-    """
+    costo_combustible = 0
     total_sin_descuento = costo_combustible + costo_peajes + costo_comidas + costo_alojamiento
     
-    total_con_descuento = aplicarDescuento(total_sin_descuento, cantidad_personas)
-    
+    total_con_descuento = AplicarDescuento.aplicarDescuento(total_sin_descuento, cantidad_personas)
+    print(total_con_descuento)
+    """
     pago_por_persona = dividirGastos(total_con_descuento, cantidad_personas)
     
     mostrarResumen(costo_combustible, costo_peajes, costo_comidas, costo_alojamiento, 
