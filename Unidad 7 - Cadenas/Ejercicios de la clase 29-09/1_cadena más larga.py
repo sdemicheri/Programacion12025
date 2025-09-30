@@ -1,5 +1,5 @@
 """
-Solicitar dos cadenas e imprimir la cadena mas larga
+Pedir 2 cadenas e imprimir la cadena mas larga
 """
 cadena_1 = input("Ingrese la cadena 1: ")
 cadena_2 = input("Ingrese la cadena 2: ")

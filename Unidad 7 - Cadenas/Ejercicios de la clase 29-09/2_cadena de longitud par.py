@@ -1,5 +1,5 @@
 """
-solicitar 5 cadenas y contar cuantas cadenas tienen longitud par
+Pedir 5 cadenas y contar cuantas cadenas tienen longitud par
 """
 contador_par = 0
 for i in range(5):
