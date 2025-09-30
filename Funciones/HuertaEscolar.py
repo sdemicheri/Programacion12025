@@ -201,6 +201,7 @@ Organizar información en secciones claras
 # ============================================================================
 
 #import
+import calcularTiempoCosecha
 
 # ============================================================================
 # FUNCIONES
@@ -226,7 +227,7 @@ def main():
     print("╔══════════════════════════════════════════════════════════╗")
     print("║                    HUERTA ESCOLAR                        ║")
     print("╚══════════════════════════════════════════════════════════╝\n")
-    
+
     print("Ingrese el largo del terreno (en metros):")
     largo = validarPositivo()
     
@@ -274,7 +275,7 @@ def main():
     
     cosecha_estimada = estimarCosecha(cantidad_plantas, kilos_por_planta, porcentaje_exito)
     print(f"\n✓ Cosecha estimada: {cosecha_estimada:.2f} kilogramos")
-    
+
     print("Días de germinación (semilla a brote):")
     dias_germinacion = validarPositivo()
     
@@ -284,9 +285,9 @@ def main():
     print("Días de maduración (hasta cosecha):")
     dias_maduracion = validarPositivo()
     
-    dias_totales = calcularTiempoCosecha(dias_germinacion, dias_crecimiento, dias_maduracion)
+    dias_totales = calcularTiempoCosecha.calcularTiempoCosecha(dias_germinacion, dias_crecimiento, dias_maduracion)
     print(f"\n✓ Tiempo total hasta cosecha: {int(dias_totales)} días")
-    
+
     area_utilizada = cantidad_plantas * espacio_por_planta
     
     mensaje_eficiencia = determinarEficiencia(area_utilizada, area_total)
