@@ -96,6 +96,7 @@ Programa Principal
 import calcularComidas
 import Funcion_6
 import AplicarDescuento
+import mostrarresumen
 # FUNCIONES
 def validarPositivo():
     try:
@@ -172,10 +173,10 @@ def main():
     
     pago_por_persona = Funcion_6.dividirGastos(total_con_descuento, cantidad_personas)
     print(pago_por_persona)
-    """
-    mostrarResumen(costo_combustible, costo_peajes, costo_comidas, costo_alojamiento, 
+
+    mostrarresumen.mostrarResumen(costo_combustible, costo_peajes, costo_comidas, costo_alojamiento, 
                    total_sin_descuento, total_con_descuento, pago_por_persona, cantidad_personas)
-    """
+
     print("Gracias!!! y Buen viaje! 🚗")
 
       
