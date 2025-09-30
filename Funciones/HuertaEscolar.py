@@ -217,6 +217,9 @@ def validarPositivo():
     except ValueError:
         print("Ingresó un dato no válido")
         return 0   
+    
+def calcularAguaMensual(agua_diaria, dias_mes):
+    return agua_diaria * dias_mes   
 
 
 # ============================================================================
