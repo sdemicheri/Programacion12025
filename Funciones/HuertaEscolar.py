@@ -202,7 +202,7 @@ Organizar información en secciones claras
 
 #import
 import calcularTiempoCosecha
-
+import calcularAguaDiaria
 # ============================================================================
 # FUNCIONES
 # ============================================================================
@@ -230,7 +230,7 @@ def main():
     print("╔══════════════════════════════════════════════════════════╗")
     print("║                    HUERTA ESCOLAR                        ║")
     print("╚══════════════════════════════════════════════════════════╝\n")
-
+    
     print("Ingrese el largo del terreno (en metros):")
     largo = validarPositivo()
     
@@ -257,7 +257,7 @@ def main():
     print("¿Cuántos litros de agua necesita cada planta por día?")
     litros_por_planta = validarPositivo()
     
-    agua_diaria = calcularAguaDiaria(cantidad_plantas, litros_por_planta)
+    agua_diaria = calcularAguaDiaria.calcularAguaDiaria(cantidad_plantas, litros_por_planta)
     print(f"\n✓ Necesitarán regar con {agua_diaria:.2f} litros diarios")
     
     print("\nIngrese la cantidad de días del mes (28, 30 o 31):")
@@ -335,7 +335,6 @@ def main():
                       total_fertilizante, perimetro_cercar, info_estacion, total_compost, horas_plantacion)
     
     print("¡Plan de huerta generado exitosamente! 🌿🥬🍅")
-
 
 # ============================================================================
 # EJECUCIÓN DEL PROGRAMA
