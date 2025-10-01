@@ -14,7 +14,7 @@ dia_actual = int(input("Ingrese el día actual: "))
 
 if  (anio_actual > anio_nacido): # Calcular la edad de una persona que supera el año de vida
     if (mes_actual < mes_nacido): # La persona no llego a cumplir la edad
-        edad = (anio_actual - anio_nacido - 1)
+        edad = (anio_actual - anio_nacido) - 1
         print("Tu edad es: ", edad, "años" )
     if (mes_actual > mes_nacido): #La persona ya cumplió la edad
         edad = (anio_actual - anio_nacido)
@@ -24,7 +24,7 @@ if  (anio_actual > anio_nacido): # Calcular la edad de una persona que supera el
             edad = (anio_actual - anio_nacido) # Cumpliria o ya cumplió los años
             print("Tu edad es: ", edad, "años" )
         if (dia_actual < dia_nacido): # Esta en el mes donde cumpliria la edad pero todavia no llegó el día
-            edad = (anio_actual - anio_nacido - 1)
+            edad = (anio_actual - anio_nacido) - 1
             print("Tu edad es: ", edad, "años" )
 elif (anio_actual == anio_nacido): # calcula la edad de una persona que no supera el año de vida. Ejemplo: un bebé
     if (mes_actual > mes_nacido): # Se calcula la edad de alguien que tiene unos cuantos meses de vidad
@@ -40,6 +40,7 @@ elif (anio_actual == anio_nacido): # calcula la edad de una persona que no super
         print("ERROR. El mes actual no puede ser menor al mes de nacido")
 else:
     print("ERROR. El año de nacimiento no puede ser mayor al año actual")
+
 
 
 
