@@ -221,6 +221,10 @@ def validarPositivo():
 def calcularAguaMensual(agua_diaria, dias_mes):
     return agua_diaria * dias_mes   
 
+def estimarCosecha(cantidad_plantas, kilos_por_planta, porcentaje_exito):
+    cosecha_ideal=cantidad_plantas*kilos_por_planta
+    cosecha_real=cosecha_ideal*(porcentaje_exito/100)
+    return cosecha_real
 
 # ============================================================================
 # FUNCION DEL PROGRAMA PRINCIPAL
@@ -278,7 +282,7 @@ def main():
     
     cosecha_estimada = estimarCosecha(cantidad_plantas, kilos_por_planta, porcentaje_exito)
     print(f"\n✓ Cosecha estimada: {cosecha_estimada:.2f} kilogramos")
-
+    
     print("Días de germinación (semilla a brote):")
     dias_germinacion = validarPositivo()
     
