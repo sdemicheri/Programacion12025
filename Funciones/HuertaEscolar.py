@@ -203,6 +203,7 @@ Organizar información en secciones claras
 #import
 import calcularTiempoCosecha
 import calcularAguaDiaria
+import calcularCantidadPlantas
 # ============================================================================
 # FUNCIONES
 # ============================================================================
