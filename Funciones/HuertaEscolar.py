@@ -225,6 +225,16 @@ def estimarCosecha(cantidad_plantas, kilos_por_planta, porcentaje_exito):
     cosecha_ideal=cantidad_plantas*kilos_por_planta
     cosecha_real=cosecha_ideal*(porcentaje_exito/100)
     return cosecha_real
+def calcularCercado():
+    try:
+        largo = float(input("Ingrese el largo del terreno en metros: "))
+        ancho = float(input("Ingrese el ancho del terreno en metros: "))
+        perimetro_cercar = 2 * (largo + ancho)
+        print("El perímetro del terreno es: ", perimetro_cercar)
+        return perimetro_cercar
+    except ValueError:
+        print("Ingresó un dato no válido.")
+
 
 # ============================================================================
 # FUNCION DEL PROGRAMA PRINCIPAL
