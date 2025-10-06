@@ -201,6 +201,7 @@ Organizar información en secciones claras
 # ============================================================================
 
 #import
+import calcularSemillas
 import calcularTiempoCosecha
 import calcularAguaDiaria
 import calcularCantidadPlantas
@@ -266,7 +267,7 @@ def main():
     print("(Se plantan extras por si algunas no germinan)")
     semillas_por_planta = validarPositivo()
     
-    total_semillas = calcularSemillas(cantidad_plantas, semillas_por_planta)
+    total_semillas = calcularSemillas.calcularSemillas(cantidad_plantas, semillas_por_planta)
     print(f"\n✓ Necesitarán {int(total_semillas)} semillas en total")
     
     print("¿Cuántos litros de agua necesita cada planta por día?")
