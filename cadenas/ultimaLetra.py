@@ -1,8 +1,7 @@
 contador=0
 cad=input().lower()
-if cad[-1]!=' ':
-    cad+=' '
+caracterFinal=cad[-1]
 for i in range (len(cad)):
-    if cad[i]==' ':
+    if cad[i]==caracterFinal:
         contador+=1
 print (contador)

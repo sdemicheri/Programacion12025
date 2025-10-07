@@ -6,4 +6,4 @@ for i in range (len(cad)):
         cad2+=' '
     else:
         cad2+=cad[i]
-print (cad2[2,5])
+print (cad2)
