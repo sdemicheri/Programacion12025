@@ -22,9 +22,11 @@ for i in range(len(cadena)):
 
         if contar_espacios == 1:
             for i in range(primer_espacio,posicion_espacio,1):
-                palabra += cadena[i]
+                if cadena[i] != "," and cadena[i] != ":" and cadena[i] != ".":
+                    palabra += cadena[i]
             for i in range(posicion_espacio-1,primer_espacio-1,-1):
-                palabra_invertida += cadena[i]
+                if cadena[i] != "," and cadena[i] != ":" and cadena[i] != ".":                
+                    palabra_invertida += cadena[i]
             if palabra == palabra_invertida and len(palabra) > 2:
                 contar_palindroma += 1
             else:
@@ -33,9 +35,11 @@ for i in range(len(cadena)):
 
         elif contar_espacios > 1:
             for i in range(primer_espacio+1,posicion_espacio,1):
-                palabra += cadena[i]
+                if cadena[i] != "," and cadena[i] != ":" and cadena[i] != ".":                
+                    palabra += cadena[i]
             for i in range(posicion_espacio-1,primer_espacio,-1):
-                palabra_invertida += cadena[i]
+                if cadena[i] != "," and cadena[i] != ":" and cadena[i] != ".":                
+                    palabra_invertida += cadena[i]
             if palabra == palabra_invertida and len(palabra) > 2:
                 contar_palindroma += 1
 
