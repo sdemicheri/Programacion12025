@@ -29,9 +29,6 @@ for i in range(len(cadena)):
                     palabra_invertida += cadena[i]
             if palabra == palabra_invertida and len(palabra) > 2:
                 contar_palindroma += 1
-            else:
-                palabra = ""
-                palabra_invertida = ""
 
         elif contar_espacios > 1:
             for i in range(primer_espacio+1,posicion_espacio,1):
