@@ -5,7 +5,8 @@ Un palindromo es una palabra que puede leerse tanto al derecho como al reves.
 
 La busqueda no debe ser sensible a las mayusculas y minusculas.
 """
-cadena = input("Ingrese una oracion: ").lower()                
+cadena = input("Ingrese una oracion: ").lower()  
+letra = ""              
 palabra = ""
 palabra_invertida = ""
 posicion_espacio = 0
@@ -13,9 +14,9 @@ contar_palindroma = 0
 contar_espacios = 0
 
 for i in range(len(cadena)):
-
+    letra = cadena[i]
     primer_espacio = posicion_espacio
-
+    
     if cadena[i] == " ":
         contar_espacios += 1
         posicion_espacio = i
