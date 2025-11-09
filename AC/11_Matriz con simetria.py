@@ -1,11 +1,10 @@
 dimension = int(input())
-elementos = input()
-todos_elementos = elementos.split()
 matriz = [[0]*dimension for _ in range(dimension)]
-contador = 0
+
 for i in range(dimension):
     for j in range(dimension):
-        matriz[i][j] = todos_elementos[contador]
+        matriz[i][j] = input()
+
 k = 0
 vector_auxiliar = [0]*(dimension*dimension)
 for i in range(dimension-1,-1,-1):
