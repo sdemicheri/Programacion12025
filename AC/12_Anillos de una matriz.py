@@ -5,7 +5,6 @@ for f in range(filas):
     for c in range(columnas):
         matriz[f][c] = int(input())
 
-
 fila_inicial = 0
 fila_final = filas - 1
 columna_inicial = 0
